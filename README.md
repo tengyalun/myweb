@@ -7,7 +7,13 @@
 3. 在儲存庫的 **Settings → Pages**，選擇 **Deploy from a branch**，分支選 `main`、資料夾選 `/(root)`，然後按 Save。
 4. 等待 GitHub 顯示網站網址後，即可開啟使用。
 
-## 日常線上更新
+## 日常線上更新（推薦）
+
+發布後，在網站網址後面加上 `/admin.html`，例如 `https://帳號.github.io/儲存庫名稱/admin.html`。在管理頁填入 GitHub 帳號、Repository 與 Fine-grained personal access token 後，即可用表單新增、修改、刪除內容並直接儲存回 GitHub。
+
+建立 token 時，Repository access 選擇此網站的 Repository，Repository permissions 只開啟 **Contents: Read and write**。管理頁不會保存 token。
+
+## 直接編輯資料檔（備用）
 
 在 GitHub 的儲存庫中開啟 `data/knowledge.json`，按右上角的鉛筆圖示，直接修改並按 **Commit changes**。網站通常會在一兩分鐘內更新。
 
