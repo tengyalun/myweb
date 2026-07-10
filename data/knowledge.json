@@ -1,0 +1,19 @@
+{
+  "business": {
+    "headline": "把重複作業，轉換為可靠流程。",
+    "intro": "我們協助團隊整合資料、建立報表與自動化流程，讓日常工作更快、更容易被延續。",
+    "services": [
+      {"title": "資料整理", "text": "整合 Excel、報表與多來源資料，建立一致的欄位與格式。"},
+      {"title": "流程自動化", "text": "以 VBA、Power Query 與 Python 減少重複輸入、整理與匯出。"},
+      {"title": "分析與交接", "text": "產出清楚、容易維護的成果，讓團隊可以持續使用。"}
+    ]
+  },
+  "workLogs": [
+    {"date": "2026-07-10", "title": "建立個人知識管理網站", "note": "完成每日工作摘要、業務介紹與程式碼庫的初始架構。\n下一步：將網站發布到 GitHub Pages。"}
+  ],
+  "snippets": [
+    {"language": "VBA", "title": "匯出工作表為 PDF", "description": "將目前工作表輸出為同一資料夾中的 PDF。", "code": "Sub ExportSheetPDF()\n  ActiveSheet.ExportAsFixedFormat _\n    Type:=xlTypePDF, _\n    Filename:=ThisWorkbook.Path & \"\\\\Report.pdf\"\nEnd Sub"},
+    {"language": "Power Query M", "title": "篩選資料夾內的 Excel 檔案", "description": "讀取指定資料夾並保留 xlsx 檔。", "code": "let\n  Source = Folder.Files(\"C:\\\\Data\"),\n  KeepExcel = Table.SelectRows(Source, each [Extension] = \".xlsx\")\nin\n  KeepExcel"},
+    {"language": "Python", "title": "依業務員彙總 Excel 金額", "description": "以 pandas 讀取、分組並輸出新的 Excel。", "code": "import pandas as pd\n\ndf = pd.read_excel(\"sales.xlsx\")\nsummary = df.groupby(\"業務員\", as_index=False)[\"金額\"].sum()\nsummary.to_excel(\"sales_summary.xlsx\", index=False)"}
+  ]
+}
