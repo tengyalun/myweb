@@ -9,7 +9,8 @@
     ]
   },
   "workLogs": [
-    {"date": "2026-07-10", "title": "建立個人知識管理網站", "note": "完成每日工作摘要、業務介紹與程式碼庫的初始架構。\n下一步：將網站發布到 GitHub Pages。"}
+    {"date": "2026-07-10", "title": "建立個人知識管理網站", "note": "完成每日工作摘要、業務介紹與程式碼庫的初始架構。\n下一步：將網站發布到 GitHub Pages。"},
+    {"date": "2026-10-14", "title": "維護個人知識管理網站", "note": "完成每日工作摘要、業務介紹與程式碼庫的初始架構。\n下一步：將網站發布到 GitHub Pages。"},
   ],
   "snippets": [
     {"language": "VBA", "title": "匯出工作表為 PDF", "description": "將目前工作表輸出為同一資料夾中的 PDF。", "code": "Sub ExportSheetPDF()\n  ActiveSheet.ExportAsFixedFormat _\n    Type:=xlTypePDF, _\n    Filename:=ThisWorkbook.Path & \"\\\\Report.pdf\"\nEnd Sub"},
